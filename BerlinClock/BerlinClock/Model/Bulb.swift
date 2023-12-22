@@ -29,3 +29,11 @@ enum Bulb {
         }
     }
 }
+
+// MARK: - Identifiable
+
+extension Bulb: Identifiable {
+    var id: String {
+        return UUID().uuidString
+    }
+}
