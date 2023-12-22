@@ -26,6 +26,18 @@ class BerlinClockViewModelTests: XCTestCase {
         viewModel = nil
         XCTAssertTrue(tickerService.invalidateCalled)
     }
+    
+    func testPublishedPropertiesUpdatedOnTickerServiceEvent() {
+        let date = Date()
+        tickerService.simulateDateChange(date)
+        
+        XCTAssertEqual(viewModel.secondsBulb, berlinClock.getSecondsBulb())
+        XCTAssertEqual(viewModel.fiveHoursRow, berlinClock.getFiveHourRow())
+        XCTAssertEqual(viewModel.singleHoursRow, berlinClock.getSingleHourRow())
+        XCTAssertEqual(viewModel.fiveMinutesRow, berlinClock.getFiveMinuteRow())
+        XCTAssertEqual(viewModel.singleMinutesRow, berlinClock.getSingleMinuteRow())
+        XCTAssertEqual(viewModel.timeString, berlinClock.getTimeString())
+    }
 }
 
 class TickerServiceMock: TickerService {
