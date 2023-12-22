@@ -23,5 +23,6 @@ The app has been built using TDD practice, the MVVM architectural pattern, Swift
 Complete description - http://agilekatas.co.uk/katas/BerlinClock-Kata
 https://github.com/stephane-genicot/katas/blob/master/BerlinClock.md
 
-![Simulator Screenshot - iPhone 15 Pro - 2023-12-22 at 18 26 21](https://github.com/2024-DEV2-001/BerlinClock/assets/154593116/ba042923-e50b-4fd8-b76c-f82280a55d44)
+
+![Simulator Screenshot - iPhone 15 Pro - 2023-12-22 at 18 26 21](https://github.com/2024-DEV2-001/BerlinClock/assets/154593116/f4f388a1-be3a-4c76-8c40-6c46957f30c1)
 
