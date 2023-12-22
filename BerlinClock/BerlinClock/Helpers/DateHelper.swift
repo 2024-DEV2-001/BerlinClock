@@ -21,5 +21,8 @@ struct DateHelper {
     static func getSeconds(from date: Date) -> Int {
         calendar.component(.second, from: date)
     }
-
+    
+    static func getNextSecondFromNow() -> Date? {
+        calendar.date(byAdding: .second, value: 1, to: Date())
+    }
 }
