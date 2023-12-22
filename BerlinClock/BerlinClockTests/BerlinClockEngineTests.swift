@@ -12,7 +12,7 @@ final class BerlinClockEngineTests: XCTestCase {
         clock = BerlinClock(date: date)
     }
     
-    func testSecondsBulb() throws {
+    func testGetSecondsBulb() throws {
         let oneSecond:Double =  1
         XCTAssertEqual(clock.getSecondsBulb().textualRepresentation, "Y")
         
@@ -23,6 +23,27 @@ final class BerlinClockEngineTests: XCTestCase {
         dateByAddingOneSecond = clock.date.addingTimeInterval(oneSecond)
         clock = BerlinClock(date: dateByAddingOneSecond)
         XCTAssertEqual(clock.getSecondsBulb().textualRepresentation, "Y")
+    }
+    
+    func testGetFiveHourRow() {
+        let fiveHours:Double =  5 * 60 * 60
+        XCTAssertEqual(clock.getFiveHourRow().textualRepresentation, "OOOO")
+        
+        var dateByAddingFiveHours = clock.date.addingTimeInterval(fiveHours)
+        clock = BerlinClock(date: dateByAddingFiveHours)
+        XCTAssertEqual(clock.getFiveHourRow().textualRepresentation, "ROOO")
+        
+        dateByAddingFiveHours = clock.date.addingTimeInterval(fiveHours)
+        clock = BerlinClock(date: dateByAddingFiveHours)
+        XCTAssertEqual(clock.getFiveHourRow().textualRepresentation, "RROO")
+        
+        dateByAddingFiveHours = clock.date.addingTimeInterval(fiveHours)
+        clock = BerlinClock(date: dateByAddingFiveHours)
+        XCTAssertEqual(clock.getFiveHourRow().textualRepresentation, "RRRO")
+        
+        dateByAddingFiveHours = clock.date.addingTimeInterval(fiveHours)
+        clock = BerlinClock(date: dateByAddingFiveHours)
+        XCTAssertEqual(clock.getFiveHourRow().textualRepresentation, "RRRR")
     }
     
     
