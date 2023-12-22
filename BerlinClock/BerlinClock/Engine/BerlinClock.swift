@@ -3,24 +3,20 @@ import Foundation
 struct BerlinClock: BerlinClockProtocol {
     var date: Date
     
+    func getTimeString() -> String {
+        "" //placeholder
+    }
+    
     func getSecondsBulb() -> Bulb {
         DateHelper.getSeconds(from: date) % 2 == 0 ? .yellow : .off
     }
     
     func getFiveHourRow() -> [Bulb] {
-        let turnedOnCount = DateHelper.getHours(from: date) / 5
-        let rowModel = BerlinClockRowModel.fiveHourRow
-        let bulbsTurnedOn = [Bulb](repeating: rowModel.illuminatedBulbForRow, count: turnedOnCount)
-        let bulbsTurnedOff = [Bulb](repeating: .off, count: rowModel.bulbCount - turnedOnCount)
-        return bulbsTurnedOn + bulbsTurnedOff
+        calculateAndAssembleBulbsArray(for: .fiveHourRow, turnedOnCount: DateHelper.getHours(from: date) / 5)
     }
-    
-    func getTimeString() -> String {
-        "" //placeholder
-    }
-    
+
     func getSingleHourRow() -> [Bulb] {
-        [.red] //placeholder
+        calculateAndAssembleBulbsArray(for: .singleHourRow, turnedOnCount: DateHelper.getHours(from: date) % 5)
     }
     
     func getFiveMinuteRow() -> [Bulb] {
@@ -31,8 +27,9 @@ struct BerlinClock: BerlinClockProtocol {
         [.red] //placeholder
     }
     
-
-    
-
-    
+    private func calculateAndAssembleBulbsArray(for berlinClockRowModel: BerlinClockRowModel, turnedOnCount: Int) -> [Bulb] {
+        var bulbsTurnedOn = [Bulb](repeating: berlinClockRowModel.illuminatedBulbForRow, count: turnedOnCount)
+        let bulbsTurnedOff = [Bulb](repeating: .off, count: berlinClockRowModel.bulbCount - turnedOnCount)
+        return bulbsTurnedOn + bulbsTurnedOff
+    }
 }
