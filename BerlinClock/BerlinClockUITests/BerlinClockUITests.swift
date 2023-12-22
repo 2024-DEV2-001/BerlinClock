@@ -38,7 +38,7 @@ class BerlinClockViewUITests: XCTestCase {
     }
     
     private func checkExistenceOf(_ element: String) {
-        XCTAssertTrue(app.otherElements["element"].waitForExistence(timeout: 5), "\(element) should have existed")
+        XCTAssertTrue(app.otherElements[element].waitForExistence(timeout: 5), "\(element) should have existed")
 
     }
 }
