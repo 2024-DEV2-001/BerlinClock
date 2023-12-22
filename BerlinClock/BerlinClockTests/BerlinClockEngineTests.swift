@@ -71,5 +71,24 @@ final class BerlinClockEngineTests: XCTestCase {
         XCTAssertEqual(clock.getSingleHourRow().textualRepresentation, "RRRR")
     }
     
-    
+    func testGetSingleMinuteRow() {
+        let oneMinute:Double =  1 * 60
+        XCTAssertEqual(clock.getSingleMinuteRow().textualRepresentation, "OOOO")
+        
+        var dateByAddingOneMinute = clock.date.addingTimeInterval(oneMinute)
+        clock = BerlinClock(date: dateByAddingOneMinute)
+        XCTAssertEqual(clock.getSingleMinuteRow().textualRepresentation, "YOOO")
+        
+        dateByAddingOneMinute = clock.date.addingTimeInterval(oneMinute)
+        clock = BerlinClock(date: dateByAddingOneMinute)
+        XCTAssertEqual(clock.getSingleMinuteRow().textualRepresentation, "YYOO")
+        
+        dateByAddingOneMinute = clock.date.addingTimeInterval(oneMinute)
+        clock = BerlinClock(date: dateByAddingOneMinute)
+        XCTAssertEqual(clock.getSingleMinuteRow().textualRepresentation, "YYYO")
+        
+        dateByAddingOneMinute = clock.date.addingTimeInterval(oneMinute)
+        clock = BerlinClock(date: dateByAddingOneMinute)
+        XCTAssertEqual(clock.getSingleMinuteRow().textualRepresentation, "YYYY")
+    }
 }
