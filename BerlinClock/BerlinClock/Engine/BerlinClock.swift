@@ -8,9 +8,9 @@ struct BerlinClock: BerlinClockProtocol {
     }
     
     func getFiveHourRow() -> [Bulb] {
-        let turnedOnCount = DateHelper.getHours(from: date) / 5)
+        let turnedOnCount = DateHelper.getHours(from: date) / 5
         let rowModel = BerlinClockRowModel.fiveHourRow
-        var bulbsTurnedOn = [Bulb](repeating: rowModel.illuminatedBulbForRow, count: turnedOnCount)
+        let bulbsTurnedOn = [Bulb](repeating: rowModel.illuminatedBulbForRow, count: turnedOnCount)
         let bulbsTurnedOff = [Bulb](repeating: .off, count: rowModel.bulbCount - turnedOnCount)
         return bulbsTurnedOn + bulbsTurnedOff
     }
