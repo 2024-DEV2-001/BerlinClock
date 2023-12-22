@@ -8,4 +8,10 @@ final class DateHelperTests: XCTestCase {
         let date = Date(timeIntervalSince1970: testDateInSeconds)
         XCTAssertEqual(DateHelper.getSeconds(from: date), 40)
     }
+    
+    func testTimeFormat() {
+        let date = Date(timeIntervalSince1970: testDateInSeconds)
+        let formattedString = DateHelper.timeFormat.string(from: date)
+        XCTAssertEqual(formattedString, "04:46:40")
+    }
 }
