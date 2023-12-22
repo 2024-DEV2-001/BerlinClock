@@ -4,7 +4,7 @@ struct BerlinClock: BerlinClockProtocol {
     var date: Date
     
     func getTimeString() -> String {
-        "" //placeholder
+        DateHelper.timeFormat.string(from: date)
     }
     
     func getSecondsBulb() -> Bulb {
