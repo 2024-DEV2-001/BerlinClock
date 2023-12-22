@@ -15,6 +15,7 @@
 		F8B3E50D2B3593B20048586B /* BerlinClockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E50C2B3593B20048586B /* BerlinClockUITestsLaunchTests.swift */; };
 		F8B3E51A2B359B300048586B /* BerlinClockEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E5192B359B300048586B /* BerlinClockEngineTests.swift */; };
 		F8B3E51D2B359F4F0048586B /* BerlinClockEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E51C2B359F4F0048586B /* BerlinClockEngine.swift */; };
+		F8B3E52A2B35A3A90048586B /* DateHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E5292B35A3A90048586B /* DateHelperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		F8B3E50C2B3593B20048586B /* BerlinClockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F8B3E5192B359B300048586B /* BerlinClockEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockEngineTests.swift; sourceTree = "<group>"; };
 		F8B3E51C2B359F4F0048586B /* BerlinClockEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockEngine.swift; sourceTree = "<group>"; };
+		F8B3E5292B35A3A90048586B /* DateHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				F8B3E5192B359B300048586B /* BerlinClockEngineTests.swift */,
+				F8B3E5292B35A3A90048586B /* DateHelperTests.swift */,
 			);
 			path = BerlinClockTests;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B3E51A2B359B300048586B /* BerlinClockEngineTests.swift in Sources */,
+				F8B3E52A2B35A3A90048586B /* DateHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
