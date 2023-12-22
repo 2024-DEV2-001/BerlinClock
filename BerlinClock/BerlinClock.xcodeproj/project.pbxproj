@@ -14,8 +14,11 @@
 		F8B3E50B2B3593B20048586B /* BerlinClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E50A2B3593B20048586B /* BerlinClockUITests.swift */; };
 		F8B3E50D2B3593B20048586B /* BerlinClockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E50C2B3593B20048586B /* BerlinClockUITestsLaunchTests.swift */; };
 		F8B3E51A2B359B300048586B /* BerlinClockEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E5192B359B300048586B /* BerlinClockEngineTests.swift */; };
-		F8B3E51D2B359F4F0048586B /* BerlinClockEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E51C2B359F4F0048586B /* BerlinClockEngine.swift */; };
+		F8B3E51D2B359F4F0048586B /* BerlinClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E51C2B359F4F0048586B /* BerlinClock.swift */; };
 		F8B3E52A2B35A3A90048586B /* DateHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E5292B35A3A90048586B /* DateHelperTests.swift */; };
+		F8B3E52C2B35A40F0048586B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E52B2B35A40F0048586B /* DateHelper.swift */; };
+		F8B3E52D2B35A4140048586B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E52B2B35A40F0048586B /* DateHelper.swift */; };
+		F8B3E52E2B35A45C0048586B /* BerlinClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E51C2B359F4F0048586B /* BerlinClock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +49,9 @@
 		F8B3E50A2B3593B20048586B /* BerlinClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockUITests.swift; sourceTree = "<group>"; };
 		F8B3E50C2B3593B20048586B /* BerlinClockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F8B3E5192B359B300048586B /* BerlinClockEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockEngineTests.swift; sourceTree = "<group>"; };
-		F8B3E51C2B359F4F0048586B /* BerlinClockEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockEngine.swift; sourceTree = "<group>"; };
+		F8B3E51C2B359F4F0048586B /* BerlinClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClock.swift; sourceTree = "<group>"; };
 		F8B3E5292B35A3A90048586B /* DateHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelperTests.swift; sourceTree = "<group>"; };
+		F8B3E52B2B35A40F0048586B /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +141,7 @@
 		F8B3E51B2B359F390048586B /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				F8B3E51C2B359F4F0048586B /* BerlinClockEngine.swift */,
+				F8B3E51C2B359F4F0048586B /* BerlinClock.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -145,6 +149,7 @@
 		F8B3E51E2B359F980048586B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F8B3E52B2B35A40F0048586B /* DateHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -280,7 +285,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B3E4F22B3593AB0048586B /* ContentView.swift in Sources */,
-				F8B3E51D2B359F4F0048586B /* BerlinClockEngine.swift in Sources */,
+				F8B3E52C2B35A40F0048586B /* DateHelper.swift in Sources */,
+				F8B3E51D2B359F4F0048586B /* BerlinClock.swift in Sources */,
 				F8B3E4F02B3593AB0048586B /* BerlinClockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +295,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B3E52E2B35A45C0048586B /* BerlinClock.swift in Sources */,
+				F8B3E52D2B35A4140048586B /* DateHelper.swift in Sources */,
 				F8B3E51A2B359B300048586B /* BerlinClockEngineTests.swift in Sources */,
 				F8B3E52A2B35A3A90048586B /* DateHelperTests.swift in Sources */,
 			);

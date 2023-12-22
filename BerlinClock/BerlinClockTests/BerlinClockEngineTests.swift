@@ -2,15 +2,14 @@ import XCTest
 
 final class BerlinClockEngineTests: XCTestCase {
 
-    var clock: BerlinClockEngine!
+    var clock: BerlinClock!
     
     override func setUp() async throws {
         guard let date = DateHelper.timeFormat.date(from: "00:00:00") else {
             XCTFail("Error initializing date")
             return
         }
-        clock = BerlinClockEngine()
-        clock.setDate(date)
+        clock = BerlinClock(date: date)
     }
     
     func testSecondsBulb() throws {
@@ -18,12 +17,11 @@ final class BerlinClockEngineTests: XCTestCase {
         XCTAssertEqual(clock.getSecondsBulb(), "Y")
         
         var dateByAddingOneSecond = clock.date.addingTimeInterval(oneSecond)
-        clock = BerlinClockEngine()
-        clock.setDate(dateByAddingOneSecond)
+        clock = BerlinClock(date: dateByAddingOneSecond)
         XCTAssertEqual(clock.getSecondsBulb(), "O")
         
         dateByAddingOneSecond = clock.date.addingTimeInterval(oneSecond)
-        clock.setDate(dateByAddingOneSecond)
+        clock = BerlinClock(date: dateByAddingOneSecond)
         XCTAssertEqual(clock.getSecondsBulb(), "Y")
     }
 }
