@@ -9,6 +9,11 @@ final class DateHelperTests: XCTestCase {
         XCTAssertEqual(DateHelper.getSeconds(from: date), 40)
     }
     
+    func testGetHoursFromDate() {
+        let date = Date(timeIntervalSince1970: testDateInSeconds)
+        XCTAssertEqual(DateHelper.getHours(from: date), 4)
+    }
+    
     func testTimeFormat() {
         let date = Date(timeIntervalSince1970: testDateInSeconds)
         let formattedString = DateHelper.timeFormat.string(from: date)
