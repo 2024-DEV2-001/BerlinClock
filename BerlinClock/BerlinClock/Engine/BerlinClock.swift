@@ -20,7 +20,7 @@ struct BerlinClock: BerlinClockProtocol {
     }
     
     func getFiveMinuteRow() -> [Bulb] {
-        [.red] //placeholder
+        calculateAndAssembleBulbsArray(for: .fiveMinutesRow, turnedOnCount: DateHelper.getMinutes(from: date) / 5)
     }
     
     func getSingleMinuteRow() -> [Bulb] {
@@ -28,7 +28,10 @@ struct BerlinClock: BerlinClockProtocol {
     }
     
     private func calculateAndAssembleBulbsArray(for berlinClockRowModel: BerlinClockRowModel, turnedOnCount: Int) -> [Bulb] {
-        let bulbsTurnedOn = [Bulb](repeating: berlinClockRowModel.illuminatedBulbForRow, count: turnedOnCount)
+        var bulbsTurnedOn = [Bulb](repeating: berlinClockRowModel.illuminatedBulbForRow, count: turnedOnCount)
+        if berlinClockRowModel.isEveryThirdBulbRed {
+            bulbsTurnedOn = bulbsTurnedOn.enumerated().compactMap { index, element in index % 3 == 2 ? .red : element }
+        }
         let bulbsTurnedOff = [Bulb](repeating: .off, count: berlinClockRowModel.bulbCount - turnedOnCount)
         return bulbsTurnedOn + bulbsTurnedOff
     }
