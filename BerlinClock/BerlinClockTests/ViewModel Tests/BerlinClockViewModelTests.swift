@@ -20,8 +20,23 @@ class BerlinClockViewModelTests: XCTestCase {
         tickerService = nil
         berlinClock = nil
     }
+    
+    func testTickerServiceInvalidateCalledOnDeinit() {
+        XCTAssertFalse(tickerService.invalidateCalled)
+        viewModel = nil
+        XCTAssertTrue(tickerService.invalidateCalled)
+    }
 }
 
-class TickerServiceMock {
-    
+class TickerServiceMock: TickerService {
+    var invalidateCalled = false
+
+    override func invalidate() {
+        super.invalidate()
+        invalidateCalled = true
+    }
+
+    func simulateDateChange(_ date: Date) {
+        datePublisher = date
+    }
 }

@@ -1,8 +1,16 @@
-//
-//  BerlinClockViewModel.swift
-//  BerlinClock
-//
-//  Created by Dmitrijs Cesnokovs on 22/12/2023.
-//
-
 import Foundation
+import Combine
+
+class BerlinClockViewModel: ObservableObject {
+
+    private var tickerService: TickerService
+    private var berlinClock: BerlinClockProtocol
+    private var cancellables = Set<AnyCancellable>()
+    
+    init(tickerService: TickerService, berlinClock: BerlinClockProtocol) {
+        self.berlinClock = berlinClock
+        self.tickerService = tickerService
+    }
+    
+
+}
