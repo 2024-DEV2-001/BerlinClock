@@ -14,6 +14,7 @@
 		F8B3E50B2B3593B20048586B /* BerlinClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E50A2B3593B20048586B /* BerlinClockUITests.swift */; };
 		F8B3E50D2B3593B20048586B /* BerlinClockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E50C2B3593B20048586B /* BerlinClockUITestsLaunchTests.swift */; };
 		F8B3E51A2B359B300048586B /* BerlinClockEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E5192B359B300048586B /* BerlinClockEngineTests.swift */; };
+		F8B3E51D2B359F4F0048586B /* BerlinClockEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E51C2B359F4F0048586B /* BerlinClockEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		F8B3E50A2B3593B20048586B /* BerlinClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockUITests.swift; sourceTree = "<group>"; };
 		F8B3E50C2B3593B20048586B /* BerlinClockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F8B3E5192B359B300048586B /* BerlinClockEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockEngineTests.swift; sourceTree = "<group>"; };
+		F8B3E51C2B359F4F0048586B /* BerlinClockEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,8 @@
 		F8B3E4EE2B3593AB0048586B /* BerlinClock */ = {
 			isa = PBXGroup;
 			children = (
+				F8B3E51B2B359F390048586B /* Engine */,
+				F8B3E51E2B359F980048586B /* Helpers */,
 				F8B3E4EF2B3593AB0048586B /* BerlinClockApp.swift */,
 				F8B3E4F12B3593AB0048586B /* ContentView.swift */,
 				F8B3E4F32B3593B10048586B /* Assets.xcassets */,
@@ -125,6 +129,21 @@
 				F8B3E50C2B3593B20048586B /* BerlinClockUITestsLaunchTests.swift */,
 			);
 			path = BerlinClockUITests;
+			sourceTree = "<group>";
+		};
+		F8B3E51B2B359F390048586B /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				F8B3E51C2B359F4F0048586B /* BerlinClockEngine.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		F8B3E51E2B359F980048586B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B3E4F22B3593AB0048586B /* ContentView.swift in Sources */,
+				F8B3E51D2B359F4F0048586B /* BerlinClockEngine.swift in Sources */,
 				F8B3E4F02B3593AB0048586B /* BerlinClockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
