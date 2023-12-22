@@ -71,6 +71,55 @@ final class BerlinClockEngineTests: XCTestCase {
         XCTAssertEqual(clock.getSingleHourRow().textualRepresentation, "RRRR")
     }
     
+    func testFiveMinuteRow() {
+        let fiveMinutes:Double =  5 * 60
+        XCTAssertEqual(clock.getFiveMinuteRow().textualRepresentation, "OOOOOOOOOOO")
+        
+        var dateByAddingFiveMinutes = clock.date.addingTimeInterval(fiveMinutes)
+        clock = BerlinClock(date: dateByAddingFiveMinutes)
+        XCTAssertEqual(clock.getFiveMinuteRow().textualRepresentation, "YOOOOOOOOOO")
+        
+        dateByAddingFiveMinutes = clock.date.addingTimeInterval(fiveMinutes)
+        clock = BerlinClock(date: dateByAddingFiveMinutes)
+        XCTAssertEqual(clock.getFiveMinuteRow().textualRepresentation, "YYOOOOOOOOO")
+        
+        dateByAddingFiveMinutes = clock.date.addingTimeInterval(fiveMinutes)
+        clock = BerlinClock(date: dateByAddingFiveMinutes)
+        XCTAssertEqual(clock.getFiveMinuteRow().textualRepresentation, "YYROOOOOOOO")
+        
+        dateByAddingFiveMinutes = clock.date.addingTimeInterval(fiveMinutes)
+        clock = BerlinClock(date: dateByAddingFiveMinutes)
+        XCTAssertEqual(clock.getFiveMinuteRow().textualRepresentation, "YYRYOOOOOOO")
+        
+        dateByAddingFiveMinutes = clock.date.addingTimeInterval(fiveMinutes)
+        clock = BerlinClock(date: dateByAddingFiveMinutes)
+        XCTAssertEqual(clock.getFiveMinuteRow().textualRepresentation, "YYRYYOOOOOO")
+        
+        dateByAddingFiveMinutes = clock.date.addingTimeInterval(fiveMinutes)
+        clock = BerlinClock(date: dateByAddingFiveMinutes)
+        XCTAssertEqual(clock.getFiveMinuteRow().textualRepresentation, "YYRYYROOOOO")
+        
+        dateByAddingFiveMinutes = clock.date.addingTimeInterval(fiveMinutes)
+        clock = BerlinClock(date: dateByAddingFiveMinutes)
+        XCTAssertEqual(clock.getFiveMinuteRow().textualRepresentation, "YYRYYRYOOOO")
+        
+        dateByAddingFiveMinutes = clock.date.addingTimeInterval(fiveMinutes)
+        clock = BerlinClock(date: dateByAddingFiveMinutes)
+        XCTAssertEqual(clock.getFiveMinuteRow().textualRepresentation, "YYRYYRYYOOO")
+        
+        dateByAddingFiveMinutes = clock.date.addingTimeInterval(fiveMinutes)
+        clock = BerlinClock(date: dateByAddingFiveMinutes)
+        XCTAssertEqual(clock.getFiveMinuteRow().textualRepresentation, "YYRYYRYYROO")
+        
+        dateByAddingFiveMinutes = clock.date.addingTimeInterval(fiveMinutes)
+        clock = BerlinClock(date: dateByAddingFiveMinutes)
+        XCTAssertEqual(clock.getFiveMinuteRow().textualRepresentation, "YYRYYRYYRYO")
+        
+        dateByAddingFiveMinutes = clock.date.addingTimeInterval(fiveMinutes)
+        clock = BerlinClock(date: dateByAddingFiveMinutes)
+        XCTAssertEqual(clock.getFiveMinuteRow().textualRepresentation, "YYRYYRYYRYY")
+    }
+    
     func testGetSingleMinuteRow() {
         let oneMinute:Double =  1 * 60
         XCTAssertEqual(clock.getSingleMinuteRow().textualRepresentation, "OOOO")
