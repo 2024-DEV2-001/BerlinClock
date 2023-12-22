@@ -24,11 +24,11 @@ struct BerlinClock: BerlinClockProtocol {
     }
     
     func getSingleMinuteRow() -> [Bulb] {
-        [.red] //placeholder
+        calculateAndAssembleBulbsArray(for: .singleMinutesRow, turnedOnCount: DateHelper.getMinutes(from: date) % 5)
     }
     
     private func calculateAndAssembleBulbsArray(for berlinClockRowModel: BerlinClockRowModel, turnedOnCount: Int) -> [Bulb] {
-        var bulbsTurnedOn = [Bulb](repeating: berlinClockRowModel.illuminatedBulbForRow, count: turnedOnCount)
+        let bulbsTurnedOn = [Bulb](repeating: berlinClockRowModel.illuminatedBulbForRow, count: turnedOnCount)
         let bulbsTurnedOff = [Bulb](repeating: .off, count: berlinClockRowModel.bulbCount - turnedOnCount)
         return bulbsTurnedOn + bulbsTurnedOff
     }

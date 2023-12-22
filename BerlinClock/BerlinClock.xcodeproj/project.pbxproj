@@ -158,8 +158,8 @@
 		F8B3E51B2B359F390048586B /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				F8B3E51C2B359F4F0048586B /* BerlinClock.swift */,
 				F8B3E5352B35B9050048586B /* BerlinClockProtocol.swift */,
+				F8B3E51C2B359F4F0048586B /* BerlinClock.swift */,
 				F8B3E5372B35B9370048586B /* BerlinClockRowModel.swift */,
 			);
 			path = Engine;
