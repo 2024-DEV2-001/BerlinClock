@@ -12,5 +12,7 @@ class BerlinClockViewModel: ObservableObject {
         self.tickerService = tickerService
     }
     
-
+    deinit {
+        tickerService.invalidate()
+    }
 }
