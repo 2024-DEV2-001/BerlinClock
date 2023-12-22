@@ -14,14 +14,16 @@ final class BerlinClockEngineTests: XCTestCase {
     
     func testSecondsBulb() throws {
         let oneSecond:Double =  1
-        XCTAssertEqual(clock.getSecondsBulb(), "Y")
+        XCTAssertEqual(clock.getSecondsBulb().textualRepresentation, "Y")
         
         var dateByAddingOneSecond = clock.date.addingTimeInterval(oneSecond)
         clock = BerlinClock(date: dateByAddingOneSecond)
-        XCTAssertEqual(clock.getSecondsBulb(), "O")
+        XCTAssertEqual(clock.getSecondsBulb().textualRepresentation, "O")
         
         dateByAddingOneSecond = clock.date.addingTimeInterval(oneSecond)
         clock = BerlinClock(date: dateByAddingOneSecond)
-        XCTAssertEqual(clock.getSecondsBulb(), "Y")
+        XCTAssertEqual(clock.getSecondsBulb().textualRepresentation, "Y")
     }
+    
+    
 }
