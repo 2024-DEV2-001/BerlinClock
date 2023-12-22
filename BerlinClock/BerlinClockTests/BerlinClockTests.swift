@@ -1,6 +1,6 @@
 import XCTest
 
-final class BerlinClockEngineTests: XCTestCase {
+final class BerlinClockTests: XCTestCase {
 
     var clock: BerlinClockProtocol!
     
