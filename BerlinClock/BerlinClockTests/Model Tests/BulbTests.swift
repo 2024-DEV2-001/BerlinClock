@@ -19,4 +19,12 @@ final class BulbTests: XCTestCase {
         XCTAssertEqual(bulb.textualRepresentation, "O")
         XCTAssertEqual(bulb.color, Color.clear)
     }
+
+    func testIdentifiableConformance() {
+        let bulb = Bulb.red
+        XCTAssertNotNil(bulb.id)
+        
+        let bulb2 = Bulb.yellow
+        XCTAssertNotEqual(bulb.id, bulb2.id)
+    }
 }
