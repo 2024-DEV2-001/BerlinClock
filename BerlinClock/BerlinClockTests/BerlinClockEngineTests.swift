@@ -12,6 +12,10 @@ final class BerlinClockEngineTests: XCTestCase {
         clock = BerlinClock(date: date)
     }
     
+    func testGetTimeString() {
+        XCTAssertEqual(clock.getTimeString(), "00:00:00")
+    }
+    
     func testGetSecondsBulb() throws {
         let oneSecond:Double =  1
         XCTAssertEqual(clock.getSecondsBulb().textualRepresentation, "Y")
