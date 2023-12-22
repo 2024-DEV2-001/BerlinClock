@@ -22,6 +22,9 @@
 		F8B3E5302B35B4930048586B /* BulbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E52F2B35B4930048586B /* BulbTests.swift */; };
 		F8B3E5332B35B5380048586B /* Bulb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E5322B35B5380048586B /* Bulb.swift */; };
 		F8B3E5342B35B5520048586B /* Bulb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E5322B35B5380048586B /* Bulb.swift */; };
+		F8B3E5362B35B9050048586B /* BerlinClockProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E5352B35B9050048586B /* BerlinClockProtocol.swift */; };
+		F8B3E5382B35B9370048586B /* BerlinClockRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E5372B35B9370048586B /* BerlinClockRowModel.swift */; };
+		F8B3E5392B35B93F0048586B /* BerlinClockProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3E5352B35B9050048586B /* BerlinClockProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,8 @@
 		F8B3E52B2B35A40F0048586B /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		F8B3E52F2B35B4930048586B /* BulbTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulbTests.swift; sourceTree = "<group>"; };
 		F8B3E5322B35B5380048586B /* Bulb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bulb.swift; sourceTree = "<group>"; };
+		F8B3E5352B35B9050048586B /* BerlinClockProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockProtocol.swift; sourceTree = "<group>"; };
+		F8B3E5372B35B9370048586B /* BerlinClockRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockRowModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				F8B3E51C2B359F4F0048586B /* BerlinClock.swift */,
+				F8B3E5352B35B9050048586B /* BerlinClockProtocol.swift */,
+				F8B3E5372B35B9370048586B /* BerlinClockRowModel.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -299,10 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B3E5382B35B9370048586B /* BerlinClockRowModel.swift in Sources */,
 				F8B3E5332B35B5380048586B /* Bulb.swift in Sources */,
 				F8B3E4F22B3593AB0048586B /* ContentView.swift in Sources */,
 				F8B3E52C2B35A40F0048586B /* DateHelper.swift in Sources */,
 				F8B3E51D2B359F4F0048586B /* BerlinClock.swift in Sources */,
+				F8B3E5362B35B9050048586B /* BerlinClockProtocol.swift in Sources */,
 				F8B3E4F02B3593AB0048586B /* BerlinClockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +326,7 @@
 				F8B3E52D2B35A4140048586B /* DateHelper.swift in Sources */,
 				F8B3E51A2B359B300048586B /* BerlinClockEngineTests.swift in Sources */,
 				F8B3E52A2B35A3A90048586B /* DateHelperTests.swift in Sources */,
+				F8B3E5392B35B93F0048586B /* BerlinClockProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

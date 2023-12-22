@@ -2,7 +2,7 @@ import XCTest
 
 final class BerlinClockEngineTests: XCTestCase {
 
-    var clock: BerlinClock!
+    var clock: BerlinClockProtocol!
     
     override func setUp() async throws {
         guard let date = DateHelper.timeFormat.date(from: "00:00:00") else {
