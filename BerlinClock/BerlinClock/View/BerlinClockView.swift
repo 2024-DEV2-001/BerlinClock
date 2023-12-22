@@ -7,12 +7,14 @@ struct BerlinClockView: View {
         VStack {
             RoundBulbView(light: $viewModel.secondsBulb)
                 .frame(width: 75, height: 75)
-            BulbRowView(bulbs: $viewModel.fiveHoursRow)
-            BulbRowView(bulbs: $viewModel.singleHoursRow)
-            BulbRowView(bulbs: $viewModel.fiveMinutesRow)
-            BulbRowView(bulbs: $viewModel.singleMinutesRow)
+                .accessibilityIdentifier("secondsBulb")
+            BulbRowView(bulbs: $viewModel.fiveHoursRow, accessibilityPrefix: "fiveHoursRow")
+            BulbRowView(bulbs: $viewModel.singleHoursRow, accessibilityPrefix: "singleHoursRow")
+            BulbRowView(bulbs: $viewModel.fiveMinutesRow, accessibilityPrefix: "fiveMinutesRow")
+            BulbRowView(bulbs: $viewModel.singleMinutesRow, accessibilityPrefix: "singleMinutesRow")
             Text(viewModel.timeString)
                 .padding()
+                .accessibilityIdentifier("timeString")
         }
         .padding(25)
     }
@@ -20,13 +22,15 @@ struct BerlinClockView: View {
 
 struct BulbRowView: View {
     @Binding var bulbs: [Bulb]
+    let accessibilityPrefix: String
     
     var body: some View {
         HStack {
-            ForEach($bulbs, id: \.id) { $bulb in
+            ForEach(Array($bulbs.enumerated()), id: \.offset) { index, $bulb in
                 RectangleBulbView(light: $bulb)
                     .padding(2)
                     .frame(minWidth: 0, maxWidth: .infinity)
+                    .accessibilityIdentifier(accessibilityPrefix + "\(index)")
             }
             .frame(minWidth: 0, maxWidth: .infinity)
             .frame(height: 50)
